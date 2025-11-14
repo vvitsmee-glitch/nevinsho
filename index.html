@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nevin Shop</title>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    background-color: #a7e6f2;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    text-align: center;
+    background-color: #0097a7;
+    color: white;
+    padding: 15px 10px;
+    border-bottom: 3px solid #007c91;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #00acc1;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: white;
+    background: #00838f;
+    padding: 6px 14px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+
+  nav a:hover {
+    background-color: white;
+    color: #006064;
+  }
+
+  .shop-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .item-card {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    padding: 15px;
+    transition: transform 0.2s;
+  }
+
+  .item-card:hover {
+    transform: translateY(-4px);
+  }
+
+  .item-name {
+    font-weight: 700;
+    color: #007c91;
+    font-size: 1.1em;
+  }
+
+  .item-price {
+    font-weight: 600;
+    color: #0097a7;
+    text-align: right;
+  }
+
+  h2 {
+    text-align: center;
+    color: #006064;
+  }
+
+  ul {
+    margin: 5px 0 0 15px;
+    padding: 0;
+  }
+
+  li {
+    list-style-type: "• ";
+    margin-left: 5px;
+  }
+
+  /* WA bubbles */
+  .wa-floating-top {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    z-index: 50;
+  }
+
+  .wa-floating-top img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .wa-floating-bottom {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  }
+
+  .wa-floating-bottom img {
+    width: 35px;
+    height: 35px;
+  }
+
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Nevin Shop</h1>
+  <p>Payment: Money Server QueenCraft</p>
+</header>
+
+<nav>
+  <a href="#turtle">🐢 Turtle Egg</a>
+  <a href="#tools">🧰 Tools</a>
+  <a href="#book">📚 Enchanted Book</a>
+</nav>
+
+<a href="https://wa.me/6287786203009" class="wa-floating-top" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+</a>
+
+<section id="turtle">
+  <h2>🐢 Turtle Egg</h2>
+  <div class="shop-container">
+    <div class="item-card">
+      <div class="item-name">Turtle Egg (8)</div>
+      <div class="item-price">💰 35k</div>
+    </div>
+    <div class="item-card">
+      <div class="item-name">Turtle Egg (16)</div>
+      <div class="item-price">💰 70k</div>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <h2>🧰 Tools</h2>
+  <div class="shop-container">
+
+    <div class="item-card">
+      <div class="item-name">Fishing Rod</div>
+      <div class="item-price">💰 50k</div>
+      <ul>
+        <li>Luck of the Sea III</li>
+        <li>Unbreaking III</li>
+      </ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Bow</div>
+      <div class="item-price">💰 60k</div>
+      <ul>
+        <li>Power III</li>
+        <li>Infinity</li>
+        <li>Strike III</li>
+        <li>Explosion V</li>
+        <li>Snare II</li>
+      </ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Bow</div>
+      <div class="item-price">💰 40k</div>
+      <ul>
+        <li>Power IV</li>
+        <li>Punch II</li>
+      </ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Diamond Pickaxe</div>
+      <div class="item-price">💰 90k</div>
+      <ul>
+        <li>Silk Touch</li>
+        <li>Efficiency IV</li>
+        <li>Unbreaking III</li>
+        <li>Hasten I</li>
+        <li>Rebreather I</li>
+        <li>Trech II</li>
+      </ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Diamond Pickaxe</div>
+      <div class="item-price">💰 75k</div>
+      <ul>
+        <li>Silk Touch</li>
+        <li>Efficiency IV</li>
+        <li>Unbreaking III</li>
+      </ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Diamond Pickaxe</div>
+      <div class="item-price">💰 70k</div>
+      <ul>
+        <li>Silk Touch</li>
+        <li>Rebreather I</li>
+        <li>Trech IV</li>
+      </ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Diamond Pickaxe</div>
+      <div class="item-price">💰 40k</div>
+      <ul>
+        <li>Fortune III</li>
+        <li>Unbreaking III</li>
+        <li>Telepathy I</li>
+        <li>Vein Miner I</li>
+      </ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Diamond Pickaxe</div>
+      <div class="item-price">💰 35k</div>
+      <ul>
+        <li>Fortune III</li>
+        <li>Efficiency IV</li>
+      </ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Diamond Pickaxe</div>
+      <div class="item-price">💰 27k</div>
+      <ul>
+        <li>Fortune III</li>
+      </ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Diamond Pickaxe</div>
+      <ul>
+        <li>Silk Touch</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="book">
+  <h2>📚 Enchanted Book</h2>
+  <div class="shop-container">
+
+    <div class="item-card">
+      <div class="item-name">Fire Protection III</div>
+      <div class="item-price">💰 25k</div>
+      <ul><li>Fortune III</li></ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Density V</div>
+      <div class="item-price">💰 50k</div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Efficiency IV</div>
+      <div class="item-price">💰 20k</div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Flame</div>
+      <div class="item-price">💰 50k</div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Loyalty III</div>
+      <div class="item-price">💰 40k</div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Blast Protection IV</div>
+      <div class="item-price">💰 40k</div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Unbreaking III</div>
+      <div class="item-price">💰 15k</div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Knockback II</div>
+      <div class="item-price">💰 40k</div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Silk Touch</div>
+      <div class="item-price">💰 25k</div>
+      <ul><li>Lure II</li></ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Infinity</div>
+      <div class="item-price">💰 40k</div>
+      <ul>
+        <li>Fire Protection II</li>
+        <li>Quick Charge I</li>
+      </ul>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Power IV</div>
+      <div class="item-price">💰 35k</div>
+    </div>
+
+    <div class="item-card">
+      <div class="item-name">Infinity</div>
+      <div class="item-price">💰 55k</div>
+      <ul>
+        <li>Riptide III</li>
+        <li>Unbreaking III</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<a href="https://wa.me/6287786203009" class="wa-floating-bottom" target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
+</a>
+
+</body>
+</html>
