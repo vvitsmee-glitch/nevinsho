@@ -1,104 +1,48 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Teks Besar di Tengah — Custom</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg: linear-gradient(135deg,#0f172a 0%,#0b1220 100%);
-      --card: rgba(255,255,255,0.06);
-      --accent: #7c3aed;
-      --text: #fff;
-    }
-    html,body{height:100%;margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,'Helvetica Neue',Arial}
-    body{
-      background: var(--bg);
-      color:var(--text);
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:20px;
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Teks Merah Seram</title>
+<style>
+    body {
+        background: #000;
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Creepster", Arial, sans-serif;
     }
 
-    .wrap{
-      width:100%;max-width:1100px;text-align:center;
+    @import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+    h1 {
+        color: #8b0000;
+        font-size: 90px;
+        text-shadow: 4px 4px 10px #300000;
+        animation: drip 2s infinite ease-in-out;
     }
 
-    /* Teks besar di tengah */
-    .big-text{
-      display:block;
-      font-weight:800;
-      /* responsive size: from 48px up to 10vw but not too small */
-      font-size:clamp(48px,10vw,160px);
-      line-height:0.9;
-      letter-spacing:0.02em;
-      margin:0 0 24px 0;
-      word-break:break-word;
-      text-transform:none;
-      text-shadow: 0 8px 40px rgba(0,0,0,0.6);
+    @keyframes drip {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(5px); }
+        100% { transform: translateY(0); }
+    }
+    .rainbow {
+        background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, purple);
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: rainbowShift 3s linear infinite;
     }
 
-    .controls{
-      display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;
-      background:var(--card);backdrop-filter:blur(6px);padding:12px;border-radius:12px;
+    @keyframes rainbowShift {
+        0% { filter: hue-rotate(0deg); }
+        100% { filter: hue-rotate(360deg); }
     }
-
-    input[type="text"]{min-width:220px;padding:10px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--text);outline:none}
-    input[type="range"]{width:180px}
-    button{padding:10px 14px;border-radius:8px;border:0;background:var(--accent);color:white;font-weight:600;cursor:pointer}
-    .muted{opacity:0.7;font-size:13px;margin-top:10px}
-
-    @media (max-width:520px){
-      .controls{flex-direction:column}
-    }
-  </style>
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <div id="display" class="big-text">adam jagobg</div>
-
-    <div class="controls">
-      <input id="inputText" type="text" placeholder="Tulis teks di sini..." value="adam jagobg" aria-label="Teks besar">
-      <label for="sizeRange" style="display:flex;align-items:center;gap:8px">
-        <input id="sizeRange" type="range" min="32" max="220" value="160" aria-label="Ukuran teks">
-        <span id="sizeVal">160px</span>
-      </label>
-      <button id="resetBtn">Reset</button>
-    </div>
-    <div class="muted">Ketik teks lalu tekan Enter atau klik di luar. Geser slider untuk ubah ukuran.</div>
-  </div>
-
-  <script>
-    const display = document.getElementById('display');
-    const input = document.getElementById('inputText');
-    const sizeRange = document.getElementById('sizeRange');
-    const sizeVal = document.getElementById('sizeVal');
-    const resetBtn = document.getElementById('resetBtn');
-
-    function updateText(){
-      const v = input.value.trim() || '...';
-      display.textContent = v;
-    }
-
-    function updateSize(){
-      const px = sizeRange.value + 'px';
-      display.style.fontSize = px;
-      sizeVal.textContent = px;
-    }
-
-    input.addEventListener('change', updateText);
-    input.addEventListener('keyup', (e)=>{ if(e.key==='Enter') updateText(); });
-    sizeRange.addEventListener('input', updateSize);
-    resetBtn.addEventListener('click', ()=>{
-      input.value = 'adam jagobg';
-      sizeRange.value = 160;
-      updateText(); updateSize();
-    });
-
-    // inisialisasi
-    updateSize();
-  </script>
+    <h1 class="rainbow">ADAM ANJING</h1>
 </body>
 </html>
